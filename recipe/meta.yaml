@@ -32,6 +32,7 @@ requirements:
     - numpy >=1.6.1,<2
   run:
     - python
+    - opentelemetry-api
 
 test:
   imports:
