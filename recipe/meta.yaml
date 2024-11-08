@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/libertem_asi_tpx3-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/libertem_asi_tpx3-{{ version }}.tar.gz
   sha256: 57ef6ddcd5bf5666bca5425b6b4fb71e1eedd0057dc749511153defe1b5d7268
 
 build:
@@ -14,7 +14,7 @@ build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
