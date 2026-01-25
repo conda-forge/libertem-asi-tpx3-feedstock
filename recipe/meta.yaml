@@ -1,5 +1,5 @@
 {% set name = "libertem-asi-tpx3" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/libertem_asi_tpx3-{{ version }}.tar.gz
-  sha256: b349a4a894961dc6217d6b44e30bcab3c6b82d96972ac19714addb296754f732
+  sha256: 8bf21357e042c929937a1208c525850764206f446c582b821179151a1bb0eb37
 
 build:
   skip: true  # [py<37]
