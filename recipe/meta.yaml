@@ -10,9 +10,8 @@ source:
   sha256: 8bf21357e042c929937a1208c525850764206f446c582b821179151a1bb0eb37
 
 build:
-  skip: true  # [py<37]
+  skip: true  # [py<39]
   script:
-    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -23,7 +22,6 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - rust
-    - cargo-bundle-licenses
   host:
     - python
     - maturin >=1.3.1,<2
@@ -48,7 +46,7 @@ about:
   license: MIT
   license_file:
     - LICENSE
-    - THIRDPARTY.yml
+    - libertem_asi_tpx3/THIRDPARTY.yml
   description: |
     A Rust+Python library for receiving sparse array
     streams from Amsterdam Scientific Instruments
